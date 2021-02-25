@@ -51,6 +51,7 @@ namespace VLADFOM.ITMO.ADONET.Lab3LINQXML
             this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.textBoxProductCompanyName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnWriteDataToXML = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchoolProductsBase)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -111,7 +112,7 @@ namespace VLADFOM.ITMO.ADONET.Lab3LINQXML
             this.checkBoxIsThisNewProduct.AutoSize = true;
             this.checkBoxIsThisNewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxIsThisNewProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxIsThisNewProduct.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.checkBoxIsThisNewProduct.ForeColor = System.Drawing.Color.DarkGreen;
             this.checkBoxIsThisNewProduct.Location = new System.Drawing.Point(12, 110);
             this.checkBoxIsThisNewProduct.Name = "checkBoxIsThisNewProduct";
             this.checkBoxIsThisNewProduct.Size = new System.Drawing.Size(117, 21);
@@ -287,12 +288,27 @@ namespace VLADFOM.ITMO.ADONET.Lab3LINQXML
             this.label7.TabIndex = 13;
             this.label7.Text = "Поставщик:";
             // 
+            // btnWriteDataToXML
+            // 
+            this.btnWriteDataToXML.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnWriteDataToXML.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnWriteDataToXML.FlatAppearance.BorderSize = 2;
+            this.btnWriteDataToXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWriteDataToXML.Location = new System.Drawing.Point(173, 338);
+            this.btnWriteDataToXML.Name = "btnWriteDataToXML";
+            this.btnWriteDataToXML.Size = new System.Drawing.Size(163, 32);
+            this.btnWriteDataToXML.TabIndex = 14;
+            this.btnWriteDataToXML.Text = "Выгрузить в XML";
+            this.btnWriteDataToXML.UseVisualStyleBackColor = false;
+            this.btnWriteDataToXML.Click += new System.EventHandler(this.btnWriteDataToXML_Click);
+            // 
             // SchoolProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.ClientSize = new System.Drawing.Size(474, 380);
+            this.Controls.Add(this.btnWriteDataToXML);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxProductCompanyName);
             this.Controls.Add(this.panel1);
@@ -336,6 +352,7 @@ namespace VLADFOM.ITMO.ADONET.Lab3LINQXML
         private System.Windows.Forms.ComboBox comboBoxProductsSize;
         private System.Windows.Forms.TextBox textBoxProductCompanyName;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnWriteDataToXML;
     }
 }
 

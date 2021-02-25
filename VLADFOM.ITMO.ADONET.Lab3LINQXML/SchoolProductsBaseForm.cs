@@ -210,5 +210,75 @@ namespace VLADFOM.ITMO.ADONET.Lab3LINQXML
                 GridViewUpdate();
             }
         }
+
+        private void btnWriteDataToXML_Click(object sender, EventArgs e)
+        {
+            Debug.Print("Выгрузка в XML");
+
+            DataTable dataTable = new DataTable();
+
+            DataColumn column;
+
+            column = new DataColumn(); 
+            column.ColumnName = "Id"; 
+            dataTable.Columns.Add(column);
+
+            column = new DataColumn();
+            column.ColumnName = "Name";
+            dataTable.Columns.Add(column);
+
+            column = new DataColumn();
+            column.ColumnName = "Weight";
+            dataTable.Columns.Add(column);
+
+            column = new DataColumn();
+            column.ColumnName = "CompanyName";
+            dataTable.Columns.Add(column);
+
+            column = new DataColumn();
+            column.ColumnName = "Price";
+            dataTable.Columns.Add(column);
+
+            column = new DataColumn();
+            column.ColumnName = "Size";
+            dataTable.Columns.Add(column);
+
+            column = new DataColumn();
+            column.ColumnName = "Category";
+            dataTable.Columns.Add(column);
+
+            column = new DataColumn();
+            column.ColumnName = "IsNewProduct";
+            dataTable.Columns.Add(column);
+
+            column = new DataColumn();
+            column.ColumnName = "AdditionDate";
+            dataTable.Columns.Add(column);
+
+            DataSet dataSet = new DataSet();
+            dataSet.Tables.Add(dataTable);
+
+            //заполняю таблицу в DataSet на основе контекста
+            foreach (Product product in schoolProductsContext.Products)
+            {
+                DataRow row = dataSet.Tables[0].NewRow();
+                row["Id"] = product.Id;
+                row["Name"] = product.ProductName;
+                row["CompanyName"] = product.ProductCompanyName;
+                row["Price"] = product.Price;
+                row["Weight"] = product.Weight;
+                row["Size"] = product.Size;
+                row["Category"] = product.Category;
+                row["IsNewProduct"] = product.IsThisNewProduct;
+                row["AdditionDate"] = product.AdditionDate;
+
+                dataSet.Tables[0].Rows.Add(row);
+            }
+
+            string path = @"C:\Users\vladi\OneDrive\Рабочий стол\ADO.NET\Products.xml";
+            dataSet.WriteXml(path);
+
+            MessageBox.Show("Файл базы данных выгружен в XML (" + path.Replace("@","") + ")", "Выгрузка завершена", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
