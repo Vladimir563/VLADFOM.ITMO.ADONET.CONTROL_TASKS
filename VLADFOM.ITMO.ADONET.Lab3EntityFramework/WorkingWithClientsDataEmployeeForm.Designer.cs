@@ -30,12 +30,12 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
         private void InitializeComponent()
         {
             this.dataGridViewForEmployees = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelLastUpdateDate = new System.Windows.Forms.Label();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.btnDeleteClient = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxClientLastName = new System.Windows.Forms.TextBox();
+            this.dateTimePickerClientRegisterDate = new System.Windows.Forms.DateTimePicker();
+            this.textBoxClientFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,19 +45,20 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
             // dataGridViewForEmployees
             // 
             this.dataGridViewForEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewForEmployees.Location = new System.Drawing.Point(12, 30);
+            this.dataGridViewForEmployees.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridViewForEmployees.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewForEmployees.Name = "dataGridViewForEmployees";
-            this.dataGridViewForEmployees.Size = new System.Drawing.Size(383, 150);
+            this.dataGridViewForEmployees.Size = new System.Drawing.Size(411, 167);
             this.dataGridViewForEmployees.TabIndex = 0;
             // 
-            // label1
+            // labelLastUpdateDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Для сотрудников";
+            this.labelLastUpdateDate.AutoSize = true;
+            this.labelLastUpdateDate.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelLastUpdateDate.Location = new System.Drawing.Point(9, 173);
+            this.labelLastUpdateDate.Name = "labelLastUpdateDate";
+            this.labelLastUpdateDate.Size = new System.Drawing.Size(0, 13);
+            this.labelLastUpdateDate.TabIndex = 2;
             // 
             // btnAddClient
             // 
@@ -65,7 +66,7 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
             this.btnAddClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAddClient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddClient.Location = new System.Drawing.Point(12, 267);
+            this.btnAddClient.Location = new System.Drawing.Point(12, 276);
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(256, 34);
             this.btnAddClient.TabIndex = 4;
@@ -77,7 +78,7 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
             // 
             this.btnDeleteClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDeleteClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteClient.Location = new System.Drawing.Point(294, 267);
+            this.btnDeleteClient.Location = new System.Drawing.Point(294, 276);
             this.btnDeleteClient.Name = "btnDeleteClient";
             this.btnDeleteClient.Size = new System.Drawing.Size(105, 34);
             this.btnDeleteClient.TabIndex = 5;
@@ -85,31 +86,31 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
             this.btnDeleteClient.UseVisualStyleBackColor = false;
             this.btnDeleteClient.Click += new System.EventHandler(this.btnDeleteClient_Click);
             // 
-            // textBox1
+            // textBoxClientLastName
             // 
-            this.textBox1.Location = new System.Drawing.Point(74, 215);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBoxClientLastName.Location = new System.Drawing.Point(74, 224);
+            this.textBoxClientLastName.Name = "textBoxClientLastName";
+            this.textBoxClientLastName.Size = new System.Drawing.Size(194, 20);
+            this.textBoxClientLastName.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // dateTimePickerClientRegisterDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(121, 241);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(147, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePickerClientRegisterDate.Location = new System.Drawing.Point(121, 250);
+            this.dateTimePickerClientRegisterDate.Name = "dateTimePickerClientRegisterDate";
+            this.dateTimePickerClientRegisterDate.Size = new System.Drawing.Size(147, 20);
+            this.dateTimePickerClientRegisterDate.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxClientFirstName
             // 
-            this.textBox2.Location = new System.Drawing.Point(74, 189);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBoxClientFirstName.Location = new System.Drawing.Point(74, 198);
+            this.textBoxClientFirstName.Name = "textBoxClientFirstName";
+            this.textBoxClientFirstName.Size = new System.Drawing.Size(194, 20);
+            this.textBoxClientFirstName.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 196);
+            this.label2.Location = new System.Drawing.Point(9, 205);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 11;
@@ -118,7 +119,7 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 222);
+            this.label3.Location = new System.Drawing.Point(9, 231);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 12;
@@ -127,7 +128,7 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 247);
+            this.label4.Location = new System.Drawing.Point(12, 256);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 13);
             this.label4.TabIndex = 13;
@@ -137,17 +138,18 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 313);
+            this.ClientSize = new System.Drawing.Size(411, 318);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxClientFirstName);
+            this.Controls.Add(this.dateTimePickerClientRegisterDate);
+            this.Controls.Add(this.textBoxClientLastName);
             this.Controls.Add(this.btnDeleteClient);
             this.Controls.Add(this.btnAddClient);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelLastUpdateDate);
             this.Controls.Add(this.dataGridViewForEmployees);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "WorkingWithClientsDataEmployeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Работа с клиентской базой";
@@ -162,12 +164,12 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewForEmployees;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelLastUpdateDate;
         private System.Windows.Forms.Button btnAddClient;
         private System.Windows.Forms.Button btnDeleteClient;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxClientLastName;
+        private System.Windows.Forms.DateTimePicker dateTimePickerClientRegisterDate;
+        private System.Windows.Forms.TextBox textBoxClientFirstName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

@@ -27,6 +27,8 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
 
         private void WorkingWithClientsDataClientsForm_Load(object sender, EventArgs e)
         {
+            labelClientsDBInfo.Text = "База данных клиентов на " + DateTime.Today.ToString("dd-MM-yyyy");
+
             clientsContext = new ClientsEntities(); //инициализируем контекст в конструкторе формы
             var clientsNames = from d in clientsContext.People
                                select d;

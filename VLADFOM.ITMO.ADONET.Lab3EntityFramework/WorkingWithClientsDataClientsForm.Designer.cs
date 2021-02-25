@@ -29,26 +29,26 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelClientsDBInfo = new System.Windows.Forms.Label();
             this.dataGridViewForEmployees = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewForEmployees)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelClientsDBInfo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Для клиентов";
+            this.labelClientsDBInfo.AutoSize = true;
+            this.labelClientsDBInfo.Location = new System.Drawing.Point(12, 9);
+            this.labelClientsDBInfo.Name = "labelClientsDBInfo";
+            this.labelClientsDBInfo.Size = new System.Drawing.Size(0, 13);
+            this.labelClientsDBInfo.TabIndex = 4;
             // 
             // dataGridViewForEmployees
             // 
             this.dataGridViewForEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewForEmployees.Location = new System.Drawing.Point(13, 32);
+            this.dataGridViewForEmployees.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewForEmployees.Location = new System.Drawing.Point(0, 25);
             this.dataGridViewForEmployees.Name = "dataGridViewForEmployees";
-            this.dataGridViewForEmployees.Size = new System.Drawing.Size(383, 150);
+            this.dataGridViewForEmployees.Size = new System.Drawing.Size(410, 169);
             this.dataGridViewForEmployees.TabIndex = 3;
             // 
             // WorkingWithClientsDataClientsForm
@@ -56,8 +56,9 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 194);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelClientsDBInfo);
             this.Controls.Add(this.dataGridViewForEmployees);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "WorkingWithClientsDataClientsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Просмотр данных о клиентах";
@@ -72,7 +73,7 @@ namespace VLADFOM.ITMO.ADONET.Lab3EntityFramework
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelClientsDBInfo;
         private System.Windows.Forms.DataGridView dataGridViewForEmployees;
     }
 }
